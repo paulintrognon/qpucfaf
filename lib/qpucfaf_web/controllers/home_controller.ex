@@ -1,4 +1,4 @@
-defmodule QpucfafWeb.PageController do
+defmodule QpucfafWeb.HomeController do
   use QpucfafWeb, :controller
 
   def home(conn, _params) do

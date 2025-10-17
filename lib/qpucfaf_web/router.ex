@@ -17,7 +17,8 @@ defmodule QpucfafWeb.Router do
   scope "/", QpucfafWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", HomeController, :home
+    get "/games", GamesController, :index
   end
 
   # Other scopes may use custom stacks.
