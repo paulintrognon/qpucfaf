@@ -1,3 +1,17 @@
-<section>
-  <h1>Games</h1>
-</section>
+<Layouts.app flash={@flash}>
+  <section>
+    <h1>Games</h1>
+
+    <ul>
+      <%= for game <- @games do %>
+        <li>
+          <.link href={~p"/games/${@game.id}"} method="get">
+            #{game.id} - #{game.created_at}
+          </.link>
+        </li>
+      <% end %>
+    </ul>
+
+    <.link href={~p"/games"} method="post">New game</.link>
+  </section>
+</Layouts.app>

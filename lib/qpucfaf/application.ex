@@ -14,7 +14,10 @@ defmodule Qpucfaf.Application do
       # Start a worker by calling: Qpucfaf.Worker.start_link(arg)
       # {Qpucfaf.Worker, arg},
       # Start to serve requests, typically the last entry
-      QpucfafWeb.Endpoint
+      QpucfafWeb.Endpoint,
+      # Start your Stack GenServer
+      # initial stack elements as a comma-separated string
+      GamesServer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

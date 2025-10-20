@@ -18,7 +18,11 @@ defmodule QpucfafWeb.Router do
     pipe_through :browser
 
     get "/", HomeController, :home
+
+    # GAMES
     get "/games", GamesController, :index
+    get "/games/:game_id", GamesController, :show
+    post "/games", GamesController, :create
   end
 
   # Other scopes may use custom stacks.
